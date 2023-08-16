@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: account-deployment
+  labels:
+    run: account
+    app: banking-account
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: account
+
+  template:
+    metadata:
+      labels:
+        run: account
+        app: account
+      annotations:
+        dapr.io/enabled: "true"
+        dapr.io/app-id: "account"
+        dapr.io/app-port: "8080"
+    spec:
+      containers:
+        - name: account
+          image: azrulhasni/account
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+          imagePullPolicy: Always
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      dnsPolicy: ClusterFirst
