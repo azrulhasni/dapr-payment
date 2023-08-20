@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class AccounController {
   
     
-    @PostMapping(path = "/account", consumes = MediaType.ALL_VALUE)
+    @PostMapping(path = "/debit", consumes = MediaType.ALL_VALUE)
     public String processTransaction(@RequestBody Transaction body) {
         System.out.println("Transaction received: "+ body.toString());
         return "GOOD";
