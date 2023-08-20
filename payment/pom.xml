@@ -54,7 +54,6 @@
                         <image>azrulhasni/payment</image>
                     </to>
                     <container>
-                        
                         <mainClass>com.azrul.banking.payment.PaymentApplication</mainClass>
                     </container>
                 </configuration>

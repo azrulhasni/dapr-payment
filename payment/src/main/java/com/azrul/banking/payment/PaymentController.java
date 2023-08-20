@@ -24,13 +24,13 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class PaymentController {
-    
 
-
-    private static final String DAPR_HTTP_PORT = System.getenv().getOrDefault("DAPR_HTTP_PORT", "3500");
+    private static final String DAPR_HTTP_PORT = System.getenv()
+            .getOrDefault("DAPR_HTTP_PORT", "3500");
 
     @RequestMapping("/payment")
-    public ResponseEntity<Transaction> produceMessages(@RequestBody Transaction body) throws IOException, InterruptedException {
+    public ResponseEntity<Transaction> produceMessages(@RequestBody Transaction body)
+            throws IOException, InterruptedException {
        
         JSONObject tjson = new JSONObject(body);
 
@@ -39,16 +39,18 @@ public class PaymentController {
                 .connectTimeout(Duration.ofSeconds(10))
                 .build();
         
-        String dapr_url = "http://localhost:" + DAPR_HTTP_PORT + "/v1.0/invoke/account/method/debit";
+        String dapr_url = "http://localhost:" 
+                + DAPR_HTTP_PORT 
+                + "/v1.0/invoke/account/method/debit";
 
         HttpRequest request = HttpRequest.newBuilder()
                 .POST(HttpRequest.BodyPublishers.ofString(tjson.toString()))
                 .uri(URI.create(dapr_url))
                 .header("Content-Type", "application/json")
-                //.header("dapr-app-id", "order-processor")
                 .build();
 
-        HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
+        HttpResponse<String> response = httpClient.send(request, 
+                HttpResponse.BodyHandlers.ofString());
         System.out.println("Transaction passed: " + body.toString());
         System.out.println("Response: " + response.body());
         
