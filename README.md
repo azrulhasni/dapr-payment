@@ -1,5 +1,5 @@
-**Zero Trust in micro-services**
-================================
+**Zero Trust in micro-services architecture**
+=============================================
 
 ![](README.images/gWJFtQ.jpg)
 
