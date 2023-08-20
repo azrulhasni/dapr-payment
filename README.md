@@ -1,6 +1,8 @@
 **Zero Trust in micro-services**
 ================================
 
+![](README.images/gWJFtQ.jpg)
+
 Introduction
 ------------
 
