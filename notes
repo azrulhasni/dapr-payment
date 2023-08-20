@@ -1,0 +1,53 @@
+curl -d '{"orderId":"1"}' -H "Content-Type: application/json" -X POST http://localhost:8082/checkout
+curl -d '{"orderId":"1"}' -H "Content-Type: application/json" -X POST http://localhost:3602/v1.0/invoke/checkout/method/checkout/
+curl http://localhost:8083/api/TechTalks/
+
+Build containers:
+> docker build -t azrulhasni/techtalksconsumer .
+> docker build -t azrulhasni/techtalksproducer .
+
+Push 
+>mvn compile jib:build -D-Djib.to.image=azrulhasni/dapr-techtalks-producer
+>mvn compile jib:build -D-Djib.to.image=azrulhasni/dapr-techtalks-consumer
+
+kubectl port-forward --namespace default invoker-producer-deployment-785dbc884c-6nrf6 8083
+
+kubectl port-forward --namespace default invoker-consumer-deployment-649fb6df58-qp82c 3500
+
+curl -d '{"orderId":"1"}' -H "Content-Type: application/json" -X POST http://localhost:3500/checkout
+
+curl -d '{"orderId":"1"}' -H "Content-Type: application/json" -X POST http://localhost:3500/v1.0/invoke/checkout/method/checkout
+
+curl http://localhost:3500/v1.0/invoke/invoker-producer/method/generate
+
+==============
+curl -d '{"from":"Donald","to":"Mickey","value":"123"}' -H "Content-Type: application/json" -X POST http://localhost:8080/account
+
+self hosted
+-----------
+dapr run --app-id account --app-port 8080 --dapr-http-port 3500
+
+curl -d '{"from":"Donald","to":"Mickey","value":"123"}' -H "Content-Type: application/json" -X POST http://localhost:3500/v1.0/invoke/account/method/account
+
+build and push containers
+-------------------------
+mvn compile jib:build
+
+deploy to k8s
+--------------
+<deployment.yml>
+
+kubectl apply -f account-deployment.yml
+kubectl apply -f payment-deployment.yml
+
+test
+----
+kubectl port-forward --namespace default payment-deployment-dcb84f4fb-kvx79 3500
+
+curl -d '{"from":"Donald","to":"Mickey","value":"123"}' -H "Content-Type: application/json" -X POST http://localhost:3500/v1.0/invoke/account/method/account
+
+kubectl logs account-deployment-bc9c48674-qgldz  account
+
+set up mtls
+------------
+kubectl get configurations/daprsystem --namespace dapr-system -o yaml

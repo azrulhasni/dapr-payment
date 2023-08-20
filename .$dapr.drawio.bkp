@@ -1,0 +1,171 @@
+<mxfile host="Electron" modified="2023-08-20T01:51:36.605Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.8 Chrome/114.0.5735.289 Electron/25.5.0 Safari/537.36" etag="1comMgjYqyiCZgno9UcR" version="21.6.8" type="device">
+  <diagram name="Page-1" id="mhFY487VVPN434MQsDYA">
+    <mxGraphModel dx="756" dy="520" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="o5gvMAlIl1N17jMtHa50-1" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://icons.iconarchive.com/icons/iconarchive/cute-animal/256/Cute-Koala-icon.png;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="77.7" y="400.96000000000004" width="33.74" height="33.74" as="geometry" />
+        </mxCell>
+        <mxCell id="o5gvMAlIl1N17jMtHa50-2" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://icons.iconarchive.com/icons/gartoon-team/gartoon-places/256/network-server-icon.png;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="240" y="403.15" width="35" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="o5gvMAlIl1N17jMtHa50-3" value="Hey server, I would like to talk to you securely" style="rounded=1;whiteSpace=wrap;html=1;fontSize=8;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="58" y="88.7012987012987" width="73.14861460957178" height="37.4025974025974" as="geometry" />
+        </mxCell>
+        <mxCell id="o5gvMAlIl1N17jMtHa50-4" value="Of course, here is my public key / certificate" style="rounded=1;whiteSpace=wrap;html=1;fontSize=8;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="223.80352644836273" y="70" width="73.14861460957178" height="37.4025974025974" as="geometry" />
+        </mxCell>
+        <mxCell id="o5gvMAlIl1N17jMtHa50-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=8;" edge="1" parent="1" source="o5gvMAlIl1N17jMtHa50-3" target="o5gvMAlIl1N17jMtHa50-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="187.2292191435768" y="107.4025974025974" />
+              <mxPoint x="187.2292191435768" y="88.7012987012987" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="o5gvMAlIl1N17jMtHa50-5" value="Cool, let me validate that" style="rounded=1;whiteSpace=wrap;html=1;fontSize=8;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="58" y="144.8051948051948" width="73.14861460957178" height="37.4025974025974" as="geometry" />
+        </mxCell>
+        <mxCell id="o5gvMAlIl1N17jMtHa50-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;fontSize=8;" edge="1" parent="1" source="o5gvMAlIl1N17jMtHa50-4" target="o5gvMAlIl1N17jMtHa50-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="261.59697732997483" y="132.33766233766232" />
+              <mxPoint x="94.57430730478589" y="132.33766233766232" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="o5gvMAlIl1N17jMtHa50-8" value="TLS validation" style="rounded=1;whiteSpace=wrap;html=1;fontSize=8;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="58" y="203.99532467532467" width="73.14861460957178" height="18.7012987012987" as="geometry" />
+        </mxCell>
+        <mxCell id="o5gvMAlIl1N17jMtHa50-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=8;" edge="1" parent="1" source="o5gvMAlIl1N17jMtHa50-5" target="o5gvMAlIl1N17jMtHa50-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="o5gvMAlIl1N17jMtHa50-10" value="OK, the certificate looks good, here&#39;s my public key certificate" style="rounded=1;whiteSpace=wrap;html=1;fontSize=8;arcSize=17;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="58" y="243.18" width="73.15" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="o5gvMAlIl1N17jMtHa50-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="o5gvMAlIl1N17jMtHa50-8" target="o5gvMAlIl1N17jMtHa50-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="95.19" y="218.9966233766234" as="sourcePoint" />
+            <mxPoint x="96.38999999999999" y="239.29792207792207" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="o5gvMAlIl1N17jMtHa50-12" value="OK, I&#39;m going to trust your certificate by default" style="rounded=1;whiteSpace=wrap;html=1;fontSize=8;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="225.02267002518892" y="250.77922077922076" width="73.14861460957178" height="37.4025974025974" as="geometry" />
+        </mxCell>
+        <mxCell id="o5gvMAlIl1N17jMtHa50-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;fontSize=8;" edge="1" parent="1" source="o5gvMAlIl1N17jMtHa50-10" target="o5gvMAlIl1N17jMtHa50-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="o5gvMAlIl1N17jMtHa50-14" value="Secure conversation and data exchange then happens. Messages are encrypted by the public keys that are exchanged" style="rounded=1;whiteSpace=wrap;html=1;fontSize=8;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="58" y="338.04935064935063" width="238.9521410579345" height="37.4025974025974" as="geometry" />
+        </mxCell>
+        <mxCell id="o5gvMAlIl1N17jMtHa50-15" value="" style="points=[[0.015,0.015,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[0.985,0.015,0],[1,0.22,0],[1,0.44,0],[1,0.67,0],[0.985,0.89,0],[0,0.22,0],[0,0.44,0],[0,0.67,0],[0.015,0.89,0],[0.25,0.91,0],[0.5,0.91,0],[0.785,0.955,0]];verticalLabelPosition=bottom;sketch=0;html=1;verticalAlign=top;aspect=fixed;align=center;pointerEvents=1;shape=mxgraph.cisco19.x509_certificate;fillColor=#005073;strokeColor=none;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="181.13350125944584" y="138.57142857142856" width="19.25027707808564" height="18.287153652392945" as="geometry" />
+        </mxCell>
+        <mxCell id="o5gvMAlIl1N17jMtHa50-16" value="Server Public Cert." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="199.4206549118388" y="138.57142857142856" width="36.57430730478589" height="18.7012987012987" as="geometry" />
+        </mxCell>
+        <mxCell id="o5gvMAlIl1N17jMtHa50-19" value="" style="points=[[0.015,0.015,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[0.985,0.015,0],[1,0.22,0],[1,0.44,0],[1,0.67,0],[0.985,0.89,0],[0,0.22,0],[0,0.44,0],[0,0.67,0],[0.015,0.89,0],[0.25,0.91,0],[0.5,0.91,0],[0.785,0.955,0]];verticalLabelPosition=bottom;sketch=0;html=1;verticalAlign=top;aspect=fixed;align=center;pointerEvents=1;shape=mxgraph.cisco19.x509_certificate;fillColor=#005073;strokeColor=none;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="152.00120906801007" y="237.99792207792206" width="19.25027707808564" height="18.287153652392945" as="geometry" />
+        </mxCell>
+        <mxCell id="o5gvMAlIl1N17jMtHa50-20" value="Client Public Cert." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="171.25148614609571" y="237.99792207792206" width="36.57430730478589" height="18.7012987012987" as="geometry" />
+        </mxCell>
+        <mxCell id="o5gvMAlIl1N17jMtHa50-21" value="Client using a web browser" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="83.00372795969773" y="453.64870129870127" width="51.204030226700255" height="18.7012987012987" as="geometry" />
+        </mxCell>
+        <mxCell id="o5gvMAlIl1N17jMtHa50-22" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://icons.iconarchive.com/icons/bokehlicia/captiva/256/web-google-remote-desktop-icon.png;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="107.98" y="407.56" width="31.44" height="31.44" as="geometry" />
+        </mxCell>
+        <mxCell id="o5gvMAlIl1N17jMtHa50-23" value="Server" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="231.89725440806046" y="453.64870129870127" width="51.204030226700255" height="18.7012987012987" as="geometry" />
+        </mxCell>
+        <mxCell id="o5gvMAlIl1N17jMtHa50-25" value="Classic TLS workflow" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=5" vertex="1" parent="1">
+          <mxGeometry x="107.98" y="40" width="121" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="o5gvMAlIl1N17jMtHa50-28" value="Hey server, I would like to talk to you securely" style="rounded=1;whiteSpace=wrap;html=1;fontSize=8;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="397" y="88.7012987012987" width="73.14861460957178" height="37.4025974025974" as="geometry" />
+        </mxCell>
+        <mxCell id="o5gvMAlIl1N17jMtHa50-29" value="Of course, here is my public key / certificate" style="rounded=1;whiteSpace=wrap;html=1;fontSize=8;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="562.8035264483627" y="70" width="73.14861460957178" height="37.4025974025974" as="geometry" />
+        </mxCell>
+        <mxCell id="o5gvMAlIl1N17jMtHa50-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=8;" edge="1" parent="1" source="o5gvMAlIl1N17jMtHa50-28" target="o5gvMAlIl1N17jMtHa50-29">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="526.2292191435768" y="107.4025974025974" />
+              <mxPoint x="526.2292191435768" y="88.7012987012987" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="o5gvMAlIl1N17jMtHa50-31" value="Cool, let me validate that" style="rounded=1;whiteSpace=wrap;html=1;fontSize=8;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="397" y="144.8051948051948" width="73.14861460957178" height="37.4025974025974" as="geometry" />
+        </mxCell>
+        <mxCell id="o5gvMAlIl1N17jMtHa50-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;fontSize=8;" edge="1" parent="1" source="o5gvMAlIl1N17jMtHa50-29" target="o5gvMAlIl1N17jMtHa50-31">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="600.5969773299748" y="132.33766233766232" />
+              <mxPoint x="433.57430730478586" y="132.33766233766232" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="o5gvMAlIl1N17jMtHa50-33" value="TLS validation" style="rounded=1;whiteSpace=wrap;html=1;fontSize=8;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="397" y="203.99532467532467" width="73.14861460957178" height="18.7012987012987" as="geometry" />
+        </mxCell>
+        <mxCell id="o5gvMAlIl1N17jMtHa50-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=8;" edge="1" parent="1" source="o5gvMAlIl1N17jMtHa50-31" target="o5gvMAlIl1N17jMtHa50-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="o5gvMAlIl1N17jMtHa50-35" value="OK, the certificate looks good, here&#39;s my public key certificate" style="rounded=1;whiteSpace=wrap;html=1;fontSize=8;arcSize=17;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="397" y="243.18" width="73.15" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="o5gvMAlIl1N17jMtHa50-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="o5gvMAlIl1N17jMtHa50-33" target="o5gvMAlIl1N17jMtHa50-35">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="434.19" y="218.9966233766234" as="sourcePoint" />
+            <mxPoint x="435.39" y="239.29792207792207" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="o5gvMAlIl1N17jMtHa50-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="o5gvMAlIl1N17jMtHa50-37" target="o5gvMAlIl1N17jMtHa50-48">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="o5gvMAlIl1N17jMtHa50-37" value="Cool, let me validate that" style="rounded=1;whiteSpace=wrap;html=1;fontSize=8;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="564.022670025189" y="250.77922077922074" width="73.14861460957178" height="37.4025974025974" as="geometry" />
+        </mxCell>
+        <mxCell id="o5gvMAlIl1N17jMtHa50-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;fontSize=8;" edge="1" parent="1" source="o5gvMAlIl1N17jMtHa50-35" target="o5gvMAlIl1N17jMtHa50-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="o5gvMAlIl1N17jMtHa50-39" value="Secure conversation and data exchange then happens. Messages are encrypted by the public keys that are exchanged" style="rounded=1;whiteSpace=wrap;html=1;fontSize=8;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="400.05" y="338.0493506493507" width="238.9521410579345" height="37.4025974025974" as="geometry" />
+        </mxCell>
+        <mxCell id="o5gvMAlIl1N17jMtHa50-40" value="" style="points=[[0.015,0.015,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[0.985,0.015,0],[1,0.22,0],[1,0.44,0],[1,0.67,0],[0.985,0.89,0],[0,0.22,0],[0,0.44,0],[0,0.67,0],[0.015,0.89,0],[0.25,0.91,0],[0.5,0.91,0],[0.785,0.955,0]];verticalLabelPosition=bottom;sketch=0;html=1;verticalAlign=top;aspect=fixed;align=center;pointerEvents=1;shape=mxgraph.cisco19.x509_certificate;fillColor=#005073;strokeColor=none;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="520.1335012594459" y="138.57142857142856" width="19.25027707808564" height="18.287153652392945" as="geometry" />
+        </mxCell>
+        <mxCell id="o5gvMAlIl1N17jMtHa50-41" value="Server Public Cert." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="538.4206549118388" y="138.57142857142856" width="36.57430730478589" height="18.7012987012987" as="geometry" />
+        </mxCell>
+        <mxCell id="o5gvMAlIl1N17jMtHa50-42" value="" style="points=[[0.015,0.015,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[0.985,0.015,0],[1,0.22,0],[1,0.44,0],[1,0.67,0],[0.985,0.89,0],[0,0.22,0],[0,0.44,0],[0,0.67,0],[0.015,0.89,0],[0.25,0.91,0],[0.5,0.91,0],[0.785,0.955,0]];verticalLabelPosition=bottom;sketch=0;html=1;verticalAlign=top;aspect=fixed;align=center;pointerEvents=1;shape=mxgraph.cisco19.x509_certificate;fillColor=#005073;strokeColor=none;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="491.0012090680101" y="237.99792207792206" width="19.25027707808564" height="18.287153652392945" as="geometry" />
+        </mxCell>
+        <mxCell id="o5gvMAlIl1N17jMtHa50-43" value="Client Public Cert." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="510.2514861460957" y="237.99792207792206" width="36.57430730478589" height="18.7012987012987" as="geometry" />
+        </mxCell>
+        <mxCell id="o5gvMAlIl1N17jMtHa50-44" value="Micro-service #1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="420.1637279596977" y="453.6487012987013" width="51.204030226700255" height="18.7012987012987" as="geometry" />
+        </mxCell>
+        <mxCell id="o5gvMAlIl1N17jMtHa50-46" value="Micro-service #2" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="585.9672544080604" y="453.6487012987013" width="51.204030226700255" height="18.7012987012987" as="geometry" />
+        </mxCell>
+        <mxCell id="o5gvMAlIl1N17jMtHa50-47" value="mTLS workflow" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=5" vertex="1" parent="1">
+          <mxGeometry x="446.98" y="40" width="121" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="o5gvMAlIl1N17jMtHa50-48" value="TLS validation" style="rounded=1;whiteSpace=wrap;html=1;fontSize=8;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="564.0200000000001" y="307.9953246753247" width="73.14861460957178" height="18.7012987012987" as="geometry" />
+        </mxCell>
+        <mxCell id="o5gvMAlIl1N17jMtHa50-51" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://icons.iconarchive.com/icons/iconarchive/cute-ufo/256/Cute-Green-Yellow-With-Alien-UFO-icon.png;" vertex="1" parent="1">
+          <mxGeometry x="420.15999999999997" y="400.34" width="40.62" height="40.62" as="geometry" />
+        </mxCell>
+        <mxCell id="o5gvMAlIl1N17jMtHa50-53" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://icons.iconarchive.com/icons/iconarchive/cute-ufo/256/Cute-White-With-Alien-2-UFO-icon.png;" vertex="1" parent="1">
+          <mxGeometry x="595.95" y="400.96" width="40" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
