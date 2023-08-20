@@ -14,6 +14,7 @@ import java.time.Duration;
 import java.util.Random;
 import org.json.JSONObject;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -29,25 +30,16 @@ public class PaymentController {
     private static final String DAPR_HTTP_PORT = System.getenv().getOrDefault("DAPR_HTTP_PORT", "3500");
 
     @RequestMapping("/payment")
-    public ResponseEntity<Transaction> produceMessages() throws IOException, InterruptedException {
-        Random random = new Random();
-        int amount = random.nextInt(1000 - 1) + 1;
-        Transaction t = new Transaction();
-        t.setValue(amount);
-        t.setFrom("Luffy");
-        t.setTo("Zoro");
-        JSONObject tjson = new JSONObject(t);
+    public ResponseEntity<Transaction> produceMessages(@RequestBody Transaction body) throws IOException, InterruptedException {
+       
+        JSONObject tjson = new JSONObject(body);
 
         final HttpClient httpClient = HttpClient.newBuilder()
                 .version(HttpClient.Version.HTTP_2)
                 .connectTimeout(Duration.ofSeconds(10))
                 .build();
         
-        
-
-        String dapr_url = "http://localhost:" + DAPR_HTTP_PORT + "/v1.0/invoke/checkout/method/checkout";
-
-        
+        String dapr_url = "http://localhost:" + DAPR_HTTP_PORT + "/v1.0/invoke/account/method/debit";
 
         HttpRequest request = HttpRequest.newBuilder()
                 .POST(HttpRequest.BodyPublishers.ofString(tjson.toString()))
@@ -57,9 +49,9 @@ public class PaymentController {
                 .build();
 
         HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
-        System.out.println("Transaction passed: " + t.toString());
+        System.out.println("Transaction passed: " + body.toString());
         System.out.println("Response: " + response.body());
         
-        return ResponseEntity.ok().body(t);
+        return ResponseEntity.ok().body(body);
     }
 }
