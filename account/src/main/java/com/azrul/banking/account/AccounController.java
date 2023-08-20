@@ -17,13 +17,10 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class AccounController {
-  
-    
+ 
     @PostMapping(path = "/debit", consumes = MediaType.ALL_VALUE)
     public String processTransaction(@RequestBody Transaction body) {
         System.out.println("Transaction received: "+ body.toString());
         return "GOOD";
     }
-
-
 }
