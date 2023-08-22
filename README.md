@@ -637,7 +637,7 @@ Do the same for Payment
 To verify if the deployments are successful, run the command below
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-> kubectl get poods
+> kubectl get pods
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 We should see the status as per below
@@ -748,3 +748,9 @@ With this, we conclude that:
 -   Zero trust in micro-services architecture is achieved using mTLS
 
 -   mTLS can easily be implemented using Dapr
+  
+
+Source
+------
+https://github.com/azrulhasni/dapr-account
+https://github.com/azrulhasni/dapr-payment
